@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body ng-app="pokerApp" ng-controller="IndexCtrl">
+	<span>{{pot}}</span>
+	<span> 
+		<div>{{hand[0]}}</div>
+		<div>{{hand[1]}}</div>
+	</span>
+	<div ng-show="{{dealer}}">Dealer</div>
+	<div> {{blind}} </div>
+	<div> {{chips}} </div>
+
+<script src="vendor/angular.min.js"></script>
+<script src="vendor/angular-sanitize.min.js"></script>
+<script src="http://cdn.sockjs.org/sockjs-0.3.min.js"></script>
+<script src="module.js"></script>
+<% scripts.forEach(function(file) { %>
+<script src= <%=file%>></script>
+<% }); %>
+</body>
+
+</html>
